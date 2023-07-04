@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 
 class ChromePHPFormatterTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @covers Monolog\Formatter\ChromePHPFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\ChromePHPFormatter::format
      */
     public function testDefaultFormat()
     {
@@ -49,7 +49,7 @@ class ChromePHPFormatterTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\ChromePHPFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\ChromePHPFormatter::format
      */
     public function testFormatWithFileAndLine()
     {
@@ -82,7 +82,7 @@ class ChromePHPFormatterTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\ChromePHPFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\ChromePHPFormatter::format
      */
     public function testFormatWithoutContext()
     {
@@ -111,7 +111,7 @@ class ChromePHPFormatterTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\ChromePHPFormatter::formatBatch
+     * @covers Fitted\ProductManager\Monolog\Formatter\ChromePHPFormatter::formatBatch
      */
     public function testBatchFormatThrowException()
     {

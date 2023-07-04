@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use Elasticsearch\ClientBuilder;
-use Monolog\Formatter\ElasticsearchFormatter;
-use Monolog\Formatter\NormalizerFormatter;
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\ElasticsearchFormatter;
+use Fitted\ProductManager\Monolog\Formatter\NormalizerFormatter;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 use Elasticsearch\Client;
 
 class ElasticsearchHandlerTest extends TestCase
@@ -48,10 +48,10 @@ class ElasticsearchHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ElasticsearchHandler::write
-     * @covers Monolog\Handler\ElasticsearchHandler::handleBatch
-     * @covers Monolog\Handler\ElasticsearchHandler::bulkSend
-     * @covers Monolog\Handler\ElasticsearchHandler::getDefaultFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::bulkSend
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::getDefaultFormatter
      */
     public function testHandle()
     {
@@ -95,20 +95,20 @@ class ElasticsearchHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ElasticsearchHandler::setFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::setFormatter
      */
     public function testSetFormatter()
     {
         $handler = new ElasticsearchHandler($this->client);
         $formatter = new ElasticsearchFormatter('index_new', 'type_new');
         $handler->setFormatter($formatter);
-        $this->assertInstanceOf('Monolog\Formatter\ElasticsearchFormatter', $handler->getFormatter());
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Formatter\ElasticsearchFormatter', $handler->getFormatter());
         $this->assertEquals('index_new', $handler->getFormatter()->getIndex());
         $this->assertEquals('type_new', $handler->getFormatter()->getType());
     }
 
     /**
-     * @covers                   Monolog\Handler\ElasticsearchHandler::setFormatter
+     * @covers                   Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::setFormatter
      */
     public function testSetFormatterInvalid()
     {
@@ -122,8 +122,8 @@ class ElasticsearchHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ElasticsearchHandler::__construct
-     * @covers Monolog\Handler\ElasticsearchHandler::getOptions
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::getOptions
      */
     public function testOptions()
     {
@@ -137,7 +137,7 @@ class ElasticsearchHandlerTest extends TestCase
     }
 
     /**
-     * @covers       Monolog\Handler\ElasticsearchHandler::bulkSend
+     * @covers       Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::bulkSend
      * @dataProvider providerTestConnectionErrors
      */
     public function testConnectionErrors($ignore, $expectedError)
@@ -173,10 +173,10 @@ class ElasticsearchHandlerTest extends TestCase
     /**
      * Integration test using localhost Elasticsearch server
      *
-     * @covers Monolog\Handler\ElasticsearchHandler::__construct
-     * @covers Monolog\Handler\ElasticsearchHandler::handleBatch
-     * @covers Monolog\Handler\ElasticsearchHandler::bulkSend
-     * @covers Monolog\Handler\ElasticsearchHandler::getDefaultFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::bulkSend
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticsearchHandler::getDefaultFormatter
      */
     public function testHandleIntegration()
     {

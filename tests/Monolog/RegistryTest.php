@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog;
+namespace Fitted\ProductManager\Monolog;
 
 class RegistryTest extends \PHPUnit\Framework\TestCase
 {
@@ -20,7 +20,7 @@ class RegistryTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @dataProvider hasLoggerProvider
-     * @covers Monolog\Registry::hasLogger
+     * @covers Fitted\ProductManager\Monolog\Registry::hasLogger
      */
     public function testHasLogger(array $loggersToAdd, array $loggersToCheck, array $expectedResult)
     {
@@ -61,7 +61,7 @@ class RegistryTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Registry::clear
+     * @covers Fitted\ProductManager\Monolog\Registry::clear
      */
     public function testClearClears()
     {
@@ -74,8 +74,8 @@ class RegistryTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @dataProvider removedLoggerProvider
-     * @covers Monolog\Registry::addLogger
-     * @covers Monolog\Registry::removeLogger
+     * @covers Fitted\ProductManager\Monolog\Registry::addLogger
+     * @covers Fitted\ProductManager\Monolog\Registry::removeLogger
      */
     public function testRemovesLogger($loggerToAdd, $remove)
     {
@@ -97,9 +97,9 @@ class RegistryTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Registry::addLogger
-     * @covers Monolog\Registry::getInstance
-     * @covers Monolog\Registry::__callStatic
+     * @covers Fitted\ProductManager\Monolog\Registry::addLogger
+     * @covers Fitted\ProductManager\Monolog\Registry::getInstance
+     * @covers Fitted\ProductManager\Monolog\Registry::__callStatic
      */
     public function testGetsSameLogger()
     {
@@ -114,7 +114,7 @@ class RegistryTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Registry::getInstance
+     * @covers Fitted\ProductManager\Monolog\Registry::getInstance
      */
     public function testFailsOnNonExistentLogger()
     {
@@ -123,7 +123,7 @@ class RegistryTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Registry::addLogger
+     * @covers Fitted\ProductManager\Monolog\Registry::addLogger
      */
     public function testReplacesLogger()
     {
@@ -138,7 +138,7 @@ class RegistryTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Registry::addLogger
+     * @covers Fitted\ProductManager\Monolog\Registry::addLogger
      */
     public function testFailsOnUnspecifiedReplacement()
     {

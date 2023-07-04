@@ -24,11 +24,11 @@ function tester($handler, $record)
     $handler->handle($record);
 }
 
-namespace Monolog\Processor;
+namespace Fitted\ProductManager\Monolog\Processor;
 
-use Monolog\Logger;
-use Monolog\Test\TestCase;
-use Monolog\Handler\TestHandler;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Handler\TestHandler;
 
 class IntrospectionProcessorTest extends TestCase
 {

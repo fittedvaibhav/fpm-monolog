@@ -9,69 +9,69 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
-use Monolog\Processor\WebProcessor;
-use Monolog\Formatter\LineFormatter;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Processor\WebProcessor;
+use Fitted\ProductManager\Monolog\Formatter\LineFormatter;
 
 class AbstractProcessingHandlerTest extends TestCase
 {
     /**
-     * @covers Monolog\Handler\FormattableHandlerTrait::getFormatter
-     * @covers Monolog\Handler\FormattableHandlerTrait::setFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\FormattableHandlerTrait::getFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\FormattableHandlerTrait::setFormatter
      */
     public function testConstructAndGetSet()
     {
-        $handler = $this->getMockForAbstractClass('Monolog\Handler\AbstractProcessingHandler', [Logger::WARNING, false]);
+        $handler = $this->getMockForAbstractClass('Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler', [Logger::WARNING, false]);
         $handler->setFormatter($formatter = new LineFormatter);
         $this->assertSame($formatter, $handler->getFormatter());
     }
 
     /**
-     * @covers Monolog\Handler\AbstractProcessingHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler::handle
      */
     public function testHandleLowerLevelMessage()
     {
-        $handler = $this->getMockForAbstractClass('Monolog\Handler\AbstractProcessingHandler', [Logger::WARNING, true]);
+        $handler = $this->getMockForAbstractClass('Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler', [Logger::WARNING, true]);
         $this->assertFalse($handler->handle($this->getRecord(Logger::DEBUG)));
     }
 
     /**
-     * @covers Monolog\Handler\AbstractProcessingHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler::handle
      */
     public function testHandleBubbling()
     {
-        $handler = $this->getMockForAbstractClass('Monolog\Handler\AbstractProcessingHandler', [Logger::DEBUG, true]);
+        $handler = $this->getMockForAbstractClass('Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler', [Logger::DEBUG, true]);
         $this->assertFalse($handler->handle($this->getRecord()));
     }
 
     /**
-     * @covers Monolog\Handler\AbstractProcessingHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler::handle
      */
     public function testHandleNotBubbling()
     {
-        $handler = $this->getMockForAbstractClass('Monolog\Handler\AbstractProcessingHandler', [Logger::DEBUG, false]);
+        $handler = $this->getMockForAbstractClass('Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler', [Logger::DEBUG, false]);
         $this->assertTrue($handler->handle($this->getRecord()));
     }
 
     /**
-     * @covers Monolog\Handler\AbstractProcessingHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler::handle
      */
     public function testHandleIsFalseWhenNotHandled()
     {
-        $handler = $this->getMockForAbstractClass('Monolog\Handler\AbstractProcessingHandler', [Logger::WARNING, false]);
+        $handler = $this->getMockForAbstractClass('Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler', [Logger::WARNING, false]);
         $this->assertTrue($handler->handle($this->getRecord()));
         $this->assertFalse($handler->handle($this->getRecord(Logger::DEBUG)));
     }
 
     /**
-     * @covers Monolog\Handler\AbstractProcessingHandler::processRecord
+     * @covers Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler::processRecord
      */
     public function testProcessRecord()
     {
-        $handler = $this->getMockForAbstractClass('Monolog\Handler\AbstractProcessingHandler');
+        $handler = $this->getMockForAbstractClass('Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler');
         $handler->pushProcessor(new WebProcessor([
             'REQUEST_URI' => '',
             'REQUEST_METHOD' => '',
@@ -91,12 +91,12 @@ class AbstractProcessingHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ProcessableHandlerTrait::pushProcessor
-     * @covers Monolog\Handler\ProcessableHandlerTrait::popProcessor
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessableHandlerTrait::pushProcessor
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessableHandlerTrait::popProcessor
      */
     public function testPushPopProcessor()
     {
-        $logger = $this->getMockForAbstractClass('Monolog\Handler\AbstractProcessingHandler');
+        $logger = $this->getMockForAbstractClass('Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler');
         $processor1 = new WebProcessor;
         $processor2 = new WebProcessor;
 
@@ -112,11 +112,11 @@ class AbstractProcessingHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ProcessableHandlerTrait::pushProcessor
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessableHandlerTrait::pushProcessor
      */
     public function testPushProcessorWithNonCallable()
     {
-        $handler = $this->getMockForAbstractClass('Monolog\Handler\AbstractProcessingHandler');
+        $handler = $this->getMockForAbstractClass('Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler');
 
         $this->expectException(\TypeError::class);
 
@@ -124,12 +124,12 @@ class AbstractProcessingHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FormattableHandlerTrait::getFormatter
-     * @covers Monolog\Handler\FormattableHandlerTrait::getDefaultFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\FormattableHandlerTrait::getFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\FormattableHandlerTrait::getDefaultFormatter
      */
     public function testGetFormatterInitializesDefault()
     {
-        $handler = $this->getMockForAbstractClass('Monolog\Handler\AbstractProcessingHandler');
+        $handler = $this->getMockForAbstractClass('Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler');
         $this->assertInstanceOf(LineFormatter::class, $handler->getFormatter());
     }
 }

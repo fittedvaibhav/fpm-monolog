@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Formatter\LineFormatter;
-use Monolog\Formatter\FormatterInterface;
-use Monolog\Logger;
-use Monolog\Utils;
+use Fitted\ProductManager\Monolog\Formatter\LineFormatter;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Utils;
 use PhpConsole\Connector;
 use PhpConsole\Handler as VendorPhpConsoleHandler;
 use PhpConsole\Helper;
@@ -30,22 +30,22 @@ use PhpConsole\Helper;
  * 3. Install PHP Console library https://github.com/barbushin/php-console#installation
  * 4. Example (result will looks like http://i.hizliresim.com/vg3Pz4.png)
  *
- *      $logger = new \Monolog\Logger('all', array(new \Monolog\Handler\PHPConsoleHandler()));
- *      \Monolog\ErrorHandler::register($logger);
+ *      $logger = new \Fitted\ProductManager\Monolog\Logger('all', array(new \Fitted\ProductManager\Monolog\Handler\PHPConsoleHandler()));
+ *      \Fitted\ProductManager\Monolog\ErrorHandler::register($logger);
  *      echo $undefinedVar;
  *      $logger->debug('SELECT * FROM users', array('db', 'time' => 0.012));
  *      PC::debug($_SERVER); // PHP Console debugger for any type of vars
  *
  * @author Sergey Barbushin https://www.linkedin.com/in/barbushin
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 class PHPConsoleHandler extends AbstractProcessingHandler
 {
     /** @var array<string, mixed> */
     private $options = [
         'enabled' => true, // bool Is PHP Console server enabled
-        'classesPartialsTraceIgnore' => ['Monolog\\'], // array Hide calls of classes started with...
+        'classesPartialsTraceIgnore' => ['Fitted\\ProductManager\\Monolog\\'], // array Hide calls of classes started with...
         'debugTagsKeysInContext' => [0, 'tag'], // bool Is PHP Console server enabled
         'useOwnErrorsHandler' => false, // bool Enable errors handling
         'useOwnExceptionsHandler' => false, // bool Enable exceptions handling
@@ -70,7 +70,7 @@ class PHPConsoleHandler extends AbstractProcessingHandler
     private $connector;
 
     /**
-     * @param  array<string, mixed> $options   See \Monolog\Handler\PHPConsoleHandler::$options for more details
+     * @param  array<string, mixed> $options   See \Fitted\ProductManager\Monolog\Handler\PHPConsoleHandler::$options for more details
      * @param  Connector|null       $connector Instance of \PhpConsole\Connector class (optional)
      * @throws \RuntimeException
      */

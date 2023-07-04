@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class LogglyFormatterTest extends TestCase
 {
     /**
-     * @covers Monolog\Formatter\LogglyFormatter::__construct
+     * @covers Fitted\ProductManager\Monolog\Formatter\LogglyFormatter::__construct
      */
     public function testConstruct()
     {
@@ -27,7 +27,7 @@ class LogglyFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\LogglyFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\LogglyFormatter::format
      */
     public function testFormat()
     {

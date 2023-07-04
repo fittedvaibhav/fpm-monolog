@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use Exception;
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 use PHPUnit\Framework\MockObject\MockObject;
 use Rollbar\RollbarLogger;
 
@@ -21,7 +21,7 @@ use Rollbar\RollbarLogger;
  * @author Erik Johansson <erik.pm.johansson@gmail.com>
  * @see    https://rollbar.com/docs/notifier/rollbar-php/
  *
- * @coversDefaultClass Monolog\Handler\RollbarHandler
+ * @coversDefaultClass Fitted\ProductManager\Monolog\Handler\RollbarHandler
  */
 class RollbarHandlerTest extends TestCase
 {

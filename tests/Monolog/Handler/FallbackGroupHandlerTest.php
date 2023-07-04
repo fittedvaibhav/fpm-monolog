@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class FallbackGroupHandlerTest extends TestCase
 {
     /**
-     * @covers Monolog\Handler\FallbackGroupHandler::__construct
-     * @covers Monolog\Handler\FallbackGroupHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FallbackGroupHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\FallbackGroupHandler::handle
      */
     public function testHandle()
     {
@@ -34,8 +34,8 @@ class FallbackGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FallbackGroupHandler::__construct
-     * @covers Monolog\Handler\FallbackGroupHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FallbackGroupHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\FallbackGroupHandler::handle
      */
     public function testHandleExceptionThrown()
     {
@@ -51,7 +51,7 @@ class FallbackGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FallbackGroupHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\FallbackGroupHandler::handleBatch
      */
     public function testHandleBatch()
     {
@@ -65,7 +65,7 @@ class FallbackGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FallbackGroupHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\FallbackGroupHandler::handleBatch
      */
     public function testHandleBatchExceptionThrown()
     {
@@ -79,7 +79,7 @@ class FallbackGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FallbackGroupHandler::isHandling
+     * @covers Fitted\ProductManager\Monolog\Handler\FallbackGroupHandler::isHandling
      */
     public function testIsHandling()
     {
@@ -91,7 +91,7 @@ class FallbackGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FallbackGroupHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FallbackGroupHandler::handle
      */
     public function testHandleUsesProcessors()
     {
@@ -109,7 +109,7 @@ class FallbackGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FallbackGroupHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\FallbackGroupHandler::handleBatch
      */
     public function testHandleBatchUsesProcessors()
     {

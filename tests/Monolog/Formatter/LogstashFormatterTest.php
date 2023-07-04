@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 use PHPUnit\Framework\TestCase;
 
 class LogstashFormatterTest extends TestCase
 {
     /**
-     * @covers Monolog\Formatter\LogstashFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\LogstashFormatter::format
      */
     public function testDefaultFormatterV1()
     {
@@ -51,7 +51,7 @@ class LogstashFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\LogstashFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\LogstashFormatter::format
      */
     public function testFormatWithFileAndLineV1()
     {
@@ -73,7 +73,7 @@ class LogstashFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\LogstashFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\LogstashFormatter::format
      */
     public function testFormatWithContextV1()
     {
@@ -104,7 +104,7 @@ class LogstashFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\LogstashFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\LogstashFormatter::format
      */
     public function testFormatWithExtraV1()
     {

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 
 class GroupHandlerTest extends TestCase
 {
     /**
-     * @covers Monolog\Handler\GroupHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\GroupHandler::__construct
      */
     public function testConstructorOnlyTakesHandler()
     {
@@ -27,8 +27,8 @@ class GroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\GroupHandler::__construct
-     * @covers Monolog\Handler\GroupHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\GroupHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\GroupHandler::handle
      */
     public function testHandle()
     {
@@ -44,7 +44,7 @@ class GroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\GroupHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\GroupHandler::handleBatch
      */
     public function testHandleBatch()
     {
@@ -59,7 +59,7 @@ class GroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\GroupHandler::isHandling
+     * @covers Fitted\ProductManager\Monolog\Handler\GroupHandler::isHandling
      */
     public function testIsHandling()
     {
@@ -71,7 +71,7 @@ class GroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\GroupHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\GroupHandler::handle
      */
     public function testHandleUsesProcessors()
     {
@@ -89,7 +89,7 @@ class GroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\GroupHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\GroupHandler::handle
      */
     public function testHandleBatchUsesProcessors()
     {

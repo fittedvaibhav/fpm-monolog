@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
-use Monolog\Formatter\LineFormatter;
-use Monolog\Handler\Slack\SlackRecord;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\LineFormatter;
+use Fitted\ProductManager\Monolog\Handler\Slack\SlackRecord;
 
 /**
  * @author Greg Kedzierski <greg@gregkedzierski.com>
@@ -130,12 +130,12 @@ class SlackHandlerTest extends TestCase
     {
         $constructorArgs = [$token, $channel, $username, $useAttachment, $iconEmoji, Logger::DEBUG, true, $useShortAttachment, $includeExtra];
         $this->res = fopen('php://memory', 'a');
-        $this->handler = $this->getMockBuilder('Monolog\Handler\SlackHandler')
+        $this->handler = $this->getMockBuilder('Fitted\ProductManager\Monolog\Handler\SlackHandler')
             ->setConstructorArgs($constructorArgs)
             ->onlyMethods(['fsockopen', 'streamSetTimeout', 'closeSocket'])
             ->getMock();
 
-        $reflectionProperty = new \ReflectionProperty('Monolog\Handler\SocketHandler', 'connectionString');
+        $reflectionProperty = new \ReflectionProperty('Fitted\ProductManager\Monolog\Handler\SocketHandler', 'connectionString');
         $reflectionProperty->setAccessible(true);
         $reflectionProperty->setValue($this->handler, 'localhost:1234');
 

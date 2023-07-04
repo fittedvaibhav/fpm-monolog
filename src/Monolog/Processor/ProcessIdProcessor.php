@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Processor;
+namespace Fitted\ProductManager\Monolog\Processor;
 
 /**
  * Adds value of getmypid into records

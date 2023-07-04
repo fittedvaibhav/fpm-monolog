@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 /**
  * Forwards records to multiple handlers suppressing failures of each handler
@@ -17,7 +17,7 @@ namespace Monolog\Handler;
  *
  * @author Craig D'Amelio <craig@damelio.ca>
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 class WhatFailureGroupHandler extends GroupHandler
 {

@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Processor;
+namespace Fitted\ProductManager\Monolog\Processor;
 
 /**
  * An optional interface to allow labelling Monolog processors.
  *
  * @author Nicolas Grekas <p@tchwork.com>
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 interface ProcessorInterface
 {

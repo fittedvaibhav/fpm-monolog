@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 /**
  * Base Handler class providing the Handler structure, including processors and formatters
@@ -19,9 +19,9 @@ namespace Monolog\Handler;
  * @author Jordi Boggiano <j.boggiano@seld.be>
  * @author Christophe Coevoet <stof@notk.org>
  *
- * @phpstan-import-type LevelName from \Monolog\Logger
- * @phpstan-import-type Level from \Monolog\Logger
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type LevelName from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  * @phpstan-type FormattedRecord array{message: string, context: mixed[], level: Level, level_name: LevelName, channel: string, datetime: \DateTimeImmutable, extra: mixed[], formatted: mixed}
  */
 abstract class AbstractProcessingHandler extends AbstractHandler implements ProcessableHandlerInterface, FormattableHandlerInterface

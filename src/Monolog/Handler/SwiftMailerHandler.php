@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
-use Monolog\Formatter\FormatterInterface;
-use Monolog\Formatter\LineFormatter;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Formatter\LineFormatter;
 use Swift_Message;
 use Swift;
 
@@ -22,7 +22,7 @@ use Swift;
  *
  * @author Gyula Sallai
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 class SwiftMailerHandler extends MailHandler
 {

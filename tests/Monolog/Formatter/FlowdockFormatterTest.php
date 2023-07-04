@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class FlowdockFormatterTest extends TestCase
 {
     /**
-     * @covers Monolog\Formatter\FlowdockFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\FlowdockFormatter::format
      */
     public function testFormat()
     {
@@ -38,7 +38,7 @@ class FlowdockFormatterTest extends TestCase
     }
 
     /**
-     * @ covers Monolog\Formatter\FlowdockFormatter::formatBatch
+     * @ covers Fitted\ProductManager\Monolog\Formatter\FlowdockFormatter::formatBatch
      */
     public function testFormatBatch()
     {

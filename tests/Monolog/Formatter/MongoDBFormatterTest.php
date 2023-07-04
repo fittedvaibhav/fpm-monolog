@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 
 /**
  * @author Florian Plattner <me@florianplattner.de>

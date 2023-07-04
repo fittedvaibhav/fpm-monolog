@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 
 /**
  * Stores to any socket - uses fsockopen() or pfsockopen().
@@ -19,7 +19,7 @@ use Monolog\Logger;
  * @author Pablo de Leon Belloc <pablolb@gmail.com>
  * @see    http://php.net/manual/en/function.fsockopen.php
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  * @phpstan-import-type FormattedRecord from AbstractProcessingHandler
  */
 class SocketHandler extends AbstractProcessingHandler

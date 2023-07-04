@@ -11,11 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
-use Monolog\Formatter\LineFormatter;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\LineFormatter;
 
 class RedisPubSubHandlerTest extends TestCase
 {
@@ -29,7 +29,7 @@ class RedisPubSubHandlerTest extends TestCase
     public function testConstructorShouldWorkWithPredis()
     {
         $redis = $this->createMock('Predis\Client');
-        $this->assertInstanceof('Monolog\Handler\RedisPubSubHandler', new RedisPubSubHandler($redis, 'key'));
+        $this->assertInstanceof('Fitted\ProductManager\Monolog\Handler\RedisPubSubHandler', new RedisPubSubHandler($redis, 'key'));
     }
 
     public function testConstructorShouldWorkWithRedis()
@@ -39,7 +39,7 @@ class RedisPubSubHandlerTest extends TestCase
         }
 
         $redis = $this->createMock('Redis');
-        $this->assertInstanceof('Monolog\Handler\RedisPubSubHandler', new RedisPubSubHandler($redis, 'key'));
+        $this->assertInstanceof('Fitted\ProductManager\Monolog\Handler\RedisPubSubHandler', new RedisPubSubHandler($redis, 'key'));
     }
 
     public function testPredisHandle()

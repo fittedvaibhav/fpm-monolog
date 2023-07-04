@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class FilterHandlerTest extends TestCase
 {
     /**
-     * @covers Monolog\Handler\FilterHandler::isHandling
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::isHandling
      */
     public function testIsHandling()
     {
@@ -34,9 +34,9 @@ class FilterHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FilterHandler::handle
-     * @covers Monolog\Handler\FilterHandler::setAcceptedLevels
-     * @covers Monolog\Handler\FilterHandler::isHandling
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::setAcceptedLevels
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::isHandling
      */
     public function testHandleProcessOnlyNeededLevels()
     {
@@ -78,8 +78,8 @@ class FilterHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FilterHandler::setAcceptedLevels
-     * @covers Monolog\Handler\FilterHandler::getAcceptedLevels
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::setAcceptedLevels
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::getAcceptedLevels
      */
     public function testAcceptedLevelApi()
     {
@@ -102,7 +102,7 @@ class FilterHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FilterHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::handle
      */
     public function testHandleUsesProcessors()
     {
@@ -122,7 +122,7 @@ class FilterHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FilterHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::handle
      */
     public function testHandleRespectsBubble()
     {
@@ -138,7 +138,7 @@ class FilterHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FilterHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::handle
      */
     public function testHandleWithCallback()
     {
@@ -158,7 +158,7 @@ class FilterHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FilterHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::handle
      */
     public function testHandleWithBadCallbackThrowsException()
     {
@@ -182,8 +182,8 @@ class FilterHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FilterHandler::handle
-     * @covers Monolog\Handler\FilterHandler::reset
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FilterHandler::reset
      */
     public function testResetTestHandler()
     {

@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 use PHPUnit\Framework\MockObject\MockObject;
 
 /**
@@ -21,7 +21,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 class SocketHandlerTest extends TestCase
 {
     /**
-     * @var \Monolog\Handler\SocketHandler|MockObject
+     * @var \Fitted\ProductManager\Monolog\Handler\SocketHandler|MockObject
      */
     private $handler;
 
@@ -297,7 +297,7 @@ class SocketHandlerTest extends TestCase
 
         $finalMethods = array_merge($defaultMethods, $newMethods);
 
-        $this->handler = $this->getMockBuilder('Monolog\Handler\SocketHandler')
+        $this->handler = $this->getMockBuilder('Fitted\ProductManager\Monolog\Handler\SocketHandler')
             ->onlyMethods($finalMethods)
             ->setConstructorArgs(['localhost:1234'])
             ->getMock();

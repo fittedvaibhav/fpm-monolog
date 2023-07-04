@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\DateTimeImmutable;
-use Monolog\Utils;
+use Fitted\ProductManager\Monolog\DateTimeImmutable;
+use Fitted\ProductManager\Monolog\Utils;
 use Throwable;
 
 /**
@@ -41,7 +41,7 @@ class NormalizerFormatter implements FormatterInterface
     {
         $this->dateFormat = null === $dateFormat ? static::SIMPLE_DATE : $dateFormat;
         if (!function_exists('json_encode')) {
-            throw new \RuntimeException('PHP\'s json extension is required to use Monolog\'s NormalizerFormatter');
+            throw new \RuntimeException('PHP\'s json extension is required to use Fitted\ProductManager\Monolog\'s NormalizerFormatter');
         }
     }
 

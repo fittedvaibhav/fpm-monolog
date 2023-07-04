@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog;
+namespace Fitted\ProductManager\Monolog;
 
-use Monolog\Handler\StreamHandler;
-use Monolog\Handler\TestHandler;
+use Fitted\ProductManager\Monolog\Handler\StreamHandler;
+use Fitted\ProductManager\Monolog\Handler\TestHandler;
 use Psr\Log\LogLevel;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 /**
  * @author Robert Gust-Bardon <robert@gust-bardon.org>
- * @covers Monolog\SignalHandler
+ * @covers Fitted\ProductManager\Monolog\SignalHandler
  */
 class SignalHandlerTest extends TestCase
 {

@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Formatter\LineFormatter;
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Formatter\LineFormatter;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 /**
- * @coversDefaultClass \Monolog\Handler\FleepHookHandler
+ * @coversDefaultClass \Fitted\ProductManager\Monolog\Handler\FleepHookHandler
  */
 class FleepHookHandlerTest extends TestCase
 {

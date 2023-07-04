@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Formatter\FormatterInterface;
-use Monolog\Formatter\NormalizerFormatter;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Formatter\NormalizerFormatter;
+use Fitted\ProductManager\Monolog\Logger;
 
 /**
  * Handler sending logs to Zend Monitor

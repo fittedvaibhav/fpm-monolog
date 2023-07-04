@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Processor;
+namespace Fitted\ProductManager\Monolog\Processor;
 
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class TagProcessorTest extends TestCase
 {
     /**
-     * @covers Monolog\Processor\TagProcessor::__invoke
+     * @covers Fitted\ProductManager\Monolog\Processor\TagProcessor::__invoke
      */
     public function testProcessor()
     {
@@ -28,7 +28,7 @@ class TagProcessorTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Processor\TagProcessor::__invoke
+     * @covers Fitted\ProductManager\Monolog\Processor\TagProcessor::__invoke
      */
     public function testProcessorTagModification()
     {

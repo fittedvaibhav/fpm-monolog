@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
 /**
- * @covers Monolog\Formatter\LineFormatter
+ * @covers Fitted\ProductManager\Monolog\Formatter\LineFormatter
  */
 class LineFormatterTest extends \PHPUnit\Framework\TestCase
 {
@@ -117,7 +117,7 @@ class LineFormatterTest extends \PHPUnit\Framework\TestCase
             'message' => 'foobar',
         ]);
 
-        $this->assertEquals('['.date('Y-m-d').'] meh.ERROR: foobar [] {"foo":{"Monolog\\\\Formatter\\\\TestFoo":{"foo":"fooValue"}},"bar":{"Monolog\\\\Formatter\\\\TestBar":"bar"},"baz":[],"res":"[resource(stream)]"}'."\n", $message);
+        $this->assertEquals('['.date('Y-m-d').'] meh.ERROR: foobar [] {"foo":{"Fitted\\\\ProductManager\\\\Monolog\\\\Formatter\\\\TestFoo":{"foo":"fooValue"}},"bar":{"Fitted\\\\ProductManager\\\\Monolog\\\\Formatter\\\\TestBar":"bar"},"baz":[],"res":"[resource(stream)]"}'."\n", $message);
     }
 
     public function testDefFormatWithException()

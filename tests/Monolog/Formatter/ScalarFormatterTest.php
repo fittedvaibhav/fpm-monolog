@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\DateTimeImmutable;
+use Fitted\ProductManager\Monolog\DateTimeImmutable;
 
 class ScalarFormatterTest extends \PHPUnit\Framework\TestCase
 {

@@ -9,23 +9,23 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class MailHandlerTest extends TestCase
 {
     /**
-     * @covers Monolog\Handler\MailHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\MailHandler::handleBatch
      */
     public function testHandleBatch()
     {
-        $formatter = $this->createMock('Monolog\\Formatter\\FormatterInterface');
+        $formatter = $this->createMock('Fitted\\ProductManager\\Monolog\\Formatter\\FormatterInterface');
         $formatter->expects($this->once())
             ->method('formatBatch'); // Each record is formatted
 
-        $handler = $this->getMockForAbstractClass('Monolog\\Handler\\MailHandler', [], '', true, true, true, ['send', 'write']);
+        $handler = $this->getMockForAbstractClass('Fitted\\ProductManager\\Monolog\\Handler\\MailHandler', [], '', true, true, true, ['send', 'write']);
         $handler->expects($this->once())
             ->method('send');
         $handler->expects($this->never())
@@ -37,7 +37,7 @@ class MailHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\MailHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\MailHandler::handleBatch
      */
     public function testHandleBatchNotSendsMailIfMessagesAreBelowLevel()
     {
@@ -47,7 +47,7 @@ class MailHandlerTest extends TestCase
             $this->getRecord(Logger::INFO, 'information'),
         ];
 
-        $handler = $this->getMockForAbstractClass('Monolog\\Handler\\MailHandler');
+        $handler = $this->getMockForAbstractClass('Fitted\\ProductManager\\Monolog\\Handler\\MailHandler');
         $handler->expects($this->never())
             ->method('send');
         $handler->setLevel(Logger::ERROR);
@@ -56,12 +56,12 @@ class MailHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\MailHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\MailHandler::write
      */
     public function testHandle()
     {
-        $handler = $this->getMockForAbstractClass('Monolog\\Handler\\MailHandler');
-        $handler->setFormatter(new \Monolog\Formatter\LineFormatter);
+        $handler = $this->getMockForAbstractClass('Fitted\\ProductManager\\Monolog\\Handler\\MailHandler');
+        $handler->setFormatter(new \Fitted\ProductManager\Monolog\Formatter\LineFormatter);
 
         $record = $this->getRecord();
         $records = [$record];

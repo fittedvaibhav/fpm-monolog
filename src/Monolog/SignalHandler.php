@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog;
+namespace Fitted\ProductManager\Monolog;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
@@ -20,8 +20,8 @@ use ReflectionExtension;
  *
  * @author Robert Gust-Bardon <robert@gust-bardon.org>
  *
- * @phpstan-import-type Level from \Monolog\Logger
- * @phpstan-import-type LevelName from \Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type LevelName from \Fitted\ProductManager\Monolog\Logger
  */
 class SignalHandler
 {

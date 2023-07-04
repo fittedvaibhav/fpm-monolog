@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use Throwable;
 use RuntimeException;
-use Monolog\Logger;
-use Monolog\Formatter\FormatterInterface;
-use Monolog\Formatter\ElasticsearchFormatter;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Formatter\ElasticsearchFormatter;
 use InvalidArgumentException;
 use Elasticsearch\Common\Exceptions\RuntimeException as ElasticsearchRuntimeException;
 use Elasticsearch\Client;

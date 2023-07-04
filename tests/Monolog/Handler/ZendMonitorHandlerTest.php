@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 
 class ZendMonitorHandlerTest extends TestCase
 {
@@ -26,7 +26,7 @@ class ZendMonitorHandlerTest extends TestCase
     }
 
     /**
-     * @covers  Monolog\Handler\ZendMonitorHandler::write
+     * @covers  Fitted\ProductManager\Monolog\Handler\ZendMonitorHandler::write
      */
     public function testWrite()
     {
@@ -35,11 +35,11 @@ class ZendMonitorHandlerTest extends TestCase
             'message' => $record['message'],
         ];
 
-        $zendMonitor = $this->getMockBuilder('Monolog\Handler\ZendMonitorHandler')
+        $zendMonitor = $this->getMockBuilder('Fitted\ProductManager\Monolog\Handler\ZendMonitorHandler')
             ->onlyMethods(['writeZendMonitorCustomEvent', 'getDefaultFormatter'])
             ->getMock();
 
-        $formatterMock = $this->getMockBuilder('Monolog\Formatter\NormalizerFormatter')
+        $formatterMock = $this->getMockBuilder('Fitted\ProductManager\Monolog\Formatter\NormalizerFormatter')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -66,11 +66,11 @@ class ZendMonitorHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ZendMonitorHandler::getDefaultFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\ZendMonitorHandler::getDefaultFormatter
      */
     public function testGetDefaultFormatterReturnsNormalizerFormatter()
     {
         $zendMonitor = new ZendMonitorHandler();
-        $this->assertInstanceOf('Monolog\Formatter\NormalizerFormatter', $zendMonitor->getDefaultFormatter());
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Formatter\NormalizerFormatter', $zendMonitor->getDefaultFormatter());
     }
 }

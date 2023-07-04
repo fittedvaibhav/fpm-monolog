@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 
 class WildfireFormatterTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @covers Monolog\Formatter\WildfireFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\WildfireFormatter::format
      */
     public function testDefaultFormat()
     {
@@ -41,7 +41,7 @@ class WildfireFormatterTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\WildfireFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\WildfireFormatter::format
      */
     public function testFormatWithFileAndLine()
     {
@@ -66,7 +66,7 @@ class WildfireFormatterTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\WildfireFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\WildfireFormatter::format
      */
     public function testFormatWithoutContext()
     {
@@ -90,7 +90,7 @@ class WildfireFormatterTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\WildfireFormatter::formatBatch
+     * @covers Fitted\ProductManager\Monolog\Formatter\WildfireFormatter::formatBatch
      */
     public function testBatchFormatThrowException()
     {
@@ -111,7 +111,7 @@ class WildfireFormatterTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\WildfireFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\WildfireFormatter::format
      */
     public function testTableFormat()
     {

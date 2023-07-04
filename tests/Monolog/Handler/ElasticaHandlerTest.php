@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Formatter\ElasticaFormatter;
-use Monolog\Formatter\NormalizerFormatter;
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\ElasticaFormatter;
+use Fitted\ProductManager\Monolog\Formatter\NormalizerFormatter;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 use Elastica\Client;
 use Elastica\Request;
 use Elastica\Response;
@@ -49,10 +49,10 @@ class ElasticaHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ElasticaHandler::write
-     * @covers Monolog\Handler\ElasticaHandler::handleBatch
-     * @covers Monolog\Handler\ElasticaHandler::bulkSend
-     * @covers Monolog\Handler\ElasticaHandler::getDefaultFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::bulkSend
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::getDefaultFormatter
      */
     public function testHandle()
     {
@@ -83,20 +83,20 @@ class ElasticaHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ElasticaHandler::setFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::setFormatter
      */
     public function testSetFormatter()
     {
         $handler = new ElasticaHandler($this->client);
         $formatter = new ElasticaFormatter('index_new', 'type_new');
         $handler->setFormatter($formatter);
-        $this->assertInstanceOf('Monolog\Formatter\ElasticaFormatter', $handler->getFormatter());
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Formatter\ElasticaFormatter', $handler->getFormatter());
         $this->assertEquals('index_new', $handler->getFormatter()->getIndex());
         $this->assertEquals('type_new', $handler->getFormatter()->getType());
     }
 
     /**
-     * @covers                   Monolog\Handler\ElasticaHandler::setFormatter
+     * @covers                   Fitted\ProductManager\Monolog\Handler\ElasticaHandler::setFormatter
      */
     public function testSetFormatterInvalid()
     {
@@ -110,8 +110,8 @@ class ElasticaHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ElasticaHandler::__construct
-     * @covers Monolog\Handler\ElasticaHandler::getOptions
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::getOptions
      */
     public function testOptions()
     {
@@ -125,7 +125,7 @@ class ElasticaHandlerTest extends TestCase
     }
 
     /**
-     * @covers       Monolog\Handler\ElasticaHandler::bulkSend
+     * @covers       Fitted\ProductManager\Monolog\Handler\ElasticaHandler::bulkSend
      * @dataProvider providerTestConnectionErrors
      */
     public function testConnectionErrors($ignore, $expectedError)
@@ -158,10 +158,10 @@ class ElasticaHandlerTest extends TestCase
     /**
      * Integration test using localhost Elastic Search server version <7
      *
-     * @covers Monolog\Handler\ElasticaHandler::__construct
-     * @covers Monolog\Handler\ElasticaHandler::handleBatch
-     * @covers Monolog\Handler\ElasticaHandler::bulkSend
-     * @covers Monolog\Handler\ElasticaHandler::getDefaultFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::bulkSend
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::getDefaultFormatter
      */
     public function testHandleIntegration()
     {
@@ -212,10 +212,10 @@ class ElasticaHandlerTest extends TestCase
     /**
      * Integration test using localhost Elastic Search server version 7+
      *
-     * @covers Monolog\Handler\ElasticaHandler::__construct
-     * @covers Monolog\Handler\ElasticaHandler::handleBatch
-     * @covers Monolog\Handler\ElasticaHandler::bulkSend
-     * @covers Monolog\Handler\ElasticaHandler::getDefaultFormatter
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::bulkSend
+     * @covers Fitted\ProductManager\Monolog\Handler\ElasticaHandler::getDefaultFormatter
      */
     public function testHandleIntegrationNewESVersion()
     {

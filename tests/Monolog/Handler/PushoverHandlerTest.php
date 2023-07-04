@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 
 /**
  * Almost all examples (expected header, titles, messages) taken from
@@ -116,12 +116,12 @@ class PushoverHandlerTest extends TestCase
     {
         $constructorArgs = [$token, $user, $title];
         $this->res = fopen('php://memory', 'a');
-        $this->handler = $this->getMockBuilder('Monolog\Handler\PushoverHandler')
+        $this->handler = $this->getMockBuilder('Fitted\ProductManager\Monolog\Handler\PushoverHandler')
             ->setConstructorArgs($constructorArgs)
             ->onlyMethods(['fsockopen', 'streamSetTimeout', 'closeSocket'])
             ->getMock();
 
-        $reflectionProperty = new \ReflectionProperty('Monolog\Handler\SocketHandler', 'connectionString');
+        $reflectionProperty = new \ReflectionProperty('Fitted\ProductManager\Monolog\Handler\SocketHandler', 'connectionString');
         $reflectionProperty->setAccessible(true);
         $reflectionProperty->setValue($this->handler, 'localhost:1234');
 

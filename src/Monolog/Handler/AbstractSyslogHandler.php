@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
-use Monolog\Formatter\FormatterInterface;
-use Monolog\Formatter\LineFormatter;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Formatter\LineFormatter;
 
 /**
  * Common syslog functionality
  *
- * @phpstan-import-type Level from \Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
  */
 abstract class AbstractSyslogHandler extends AbstractProcessingHandler
 {

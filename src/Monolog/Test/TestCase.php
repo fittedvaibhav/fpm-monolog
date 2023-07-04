@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Test;
+namespace Fitted\ProductManager\Monolog\Test;
 
-use Monolog\Logger;
-use Monolog\DateTimeImmutable;
-use Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\DateTimeImmutable;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
 
 /**
  * Lets you easily generate log records and a dummy formatter for testing purposes
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
  *
- * @phpstan-import-type Record from \Monolog\Logger
- * @phpstan-import-type Level from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
  */
 class TestCase extends \PHPUnit\Framework\TestCase
 {

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
 use Elastica\Document;
 
@@ -18,7 +18,7 @@ use Elastica\Document;
  *
  * @author Jelle Vink <jelle.vink@gmail.com>
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 class ElasticaFormatter extends NormalizerFormatter
 {

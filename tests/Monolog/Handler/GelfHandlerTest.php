@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use Gelf\Message;
-use Monolog\Test\TestCase;
-use Monolog\Logger;
-use Monolog\Formatter\GelfMessageFormatter;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\GelfMessageFormatter;
 
 class GelfHandlerTest extends TestCase
 {
@@ -26,12 +26,12 @@ class GelfHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\GelfHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\GelfHandler::__construct
      */
     public function testConstruct()
     {
         $handler = new GelfHandler($this->getMessagePublisher());
-        $this->assertInstanceOf('Monolog\Handler\GelfHandler', $handler);
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Handler\GelfHandler', $handler);
     }
 
     protected function getHandler($messagePublisher)

@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy;
-use Monolog\Handler\FingersCrossed\ActivationStrategyInterface;
-use Monolog\Logger;
-use Monolog\ResettableInterface;
-use Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy;
+use Fitted\ProductManager\Monolog\Handler\FingersCrossed\ActivationStrategyInterface;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\ResettableInterface;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
 use Psr\Log\LogLevel;
 
 /**
@@ -30,13 +30,13 @@ use Psr\Log\LogLevel;
  * warning level.
  *
  * You can find the various activation strategies in the
- * Monolog\Handler\FingersCrossed\ namespace.
+ * Fitted\ProductManager\Monolog\Handler\FingersCrossed\ namespace.
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
  *
- * @phpstan-import-type Record from \Monolog\Logger
- * @phpstan-import-type Level from \Monolog\Logger
- * @phpstan-import-type LevelName from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type LevelName from \Fitted\ProductManager\Monolog\Logger
  */
 class FingersCrossedHandler extends Handler implements ProcessableHandlerInterface, ResettableInterface, FormattableHandlerInterface
 {
@@ -100,7 +100,7 @@ class FingersCrossedHandler extends Handler implements ProcessableHandlerInterfa
         }
 
         if (!$this->handler instanceof HandlerInterface && !is_callable($this->handler)) {
-            throw new \RuntimeException("The given handler (".json_encode($this->handler).") is not a callable nor a Monolog\Handler\HandlerInterface object");
+            throw new \RuntimeException("The given handler (".json_encode($this->handler).") is not a callable nor a Fitted\ProductManager\Monolog\Handler\HandlerInterface object");
         }
     }
 

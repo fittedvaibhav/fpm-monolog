@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler\FingersCrossed;
+namespace Fitted\ProductManager\Monolog\Handler\FingersCrossed;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 use Psr\Log\LogLevel;
 
 /**
@@ -34,9 +34,9 @@ use Psr\Log\LogLevel;
  *
  * @author Mike Meessen <netmikey@gmail.com>
  *
- * @phpstan-import-type Record from \Monolog\Logger
- * @phpstan-import-type Level from \Monolog\Logger
- * @phpstan-import-type LevelName from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type LevelName from \Fitted\ProductManager\Monolog\Logger
  */
 class ChannelLevelActivationStrategy implements ActivationStrategyInterface
 {
@@ -60,7 +60,7 @@ class ChannelLevelActivationStrategy implements ActivationStrategyInterface
     public function __construct($defaultActionLevel, array $channelToActionLevel = [])
     {
         $this->defaultActionLevel = Logger::toMonologLevel($defaultActionLevel);
-        $this->channelToActionLevel = array_map('Monolog\Logger::toMonologLevel', $channelToActionLevel);
+        $this->channelToActionLevel = array_map('Fitted\ProductManager\Monolog\Logger::toMonologLevel', $channelToActionLevel);
     }
 
     /**

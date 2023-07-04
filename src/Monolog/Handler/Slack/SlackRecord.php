@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler\Slack;
+namespace Fitted\ProductManager\Monolog\Handler\Slack;
 
-use Monolog\Logger;
-use Monolog\Utils;
-use Monolog\Formatter\NormalizerFormatter;
-use Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Utils;
+use Fitted\ProductManager\Monolog\Formatter\NormalizerFormatter;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
 
 /**
  * Slack record utility helping to log to Slack webhooks or API.
@@ -24,8 +24,8 @@ use Monolog\Formatter\FormatterInterface;
  * @see    https://api.slack.com/incoming-webhooks
  * @see    https://api.slack.com/docs/message-attachments
  *
- * @phpstan-import-type FormattedRecord from \Monolog\Handler\AbstractProcessingHandler
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type FormattedRecord from \Fitted\ProductManager\Monolog\Handler\AbstractProcessingHandler
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 class SlackRecord
 {

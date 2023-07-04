@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
-use Monolog\Utils;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Utils;
 use Psr\Log\LogLevel;
 
 /**
@@ -22,8 +22,8 @@ use Psr\Log\LogLevel;
  * @see    https://www.pushover.net/api
  *
  * @phpstan-import-type FormattedRecord from AbstractProcessingHandler
- * @phpstan-import-type Level from \Monolog\Logger
- * @phpstan-import-type LevelName from \Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type LevelName from \Fitted\ProductManager\Monolog\Logger
  */
 class PushoverHandler extends SocketHandler
 {

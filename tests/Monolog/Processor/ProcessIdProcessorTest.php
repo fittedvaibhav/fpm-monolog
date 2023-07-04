@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Processor;
+namespace Fitted\ProductManager\Monolog\Processor;
 
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class ProcessIdProcessorTest extends TestCase
 {
     /**
-     * @covers Monolog\Processor\ProcessIdProcessor::__invoke
+     * @covers Fitted\ProductManager\Monolog\Processor\ProcessIdProcessor::__invoke
      */
     public function testProcessor()
     {

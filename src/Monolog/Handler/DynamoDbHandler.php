@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use Aws\Sdk;
 use Aws\DynamoDb\DynamoDbClient;
-use Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
 use Aws\DynamoDb\Marshaler;
-use Monolog\Formatter\ScalarFormatter;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\ScalarFormatter;
+use Fitted\ProductManager\Monolog\Logger;
 
 /**
  * Amazon DynamoDB handler (http://aws.amazon.com/dynamodb/)

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog;
+namespace Fitted\ProductManager\Monolog;
 
 use InvalidArgumentException;
 
@@ -20,16 +20,16 @@ use InvalidArgumentException;
  * via static method calls on this class.
  *
  * <code>
- * $application = new Monolog\Logger('application');
- * $api = new Monolog\Logger('api');
+ * $application = new Fitted\ProductManager\Monolog\Logger('application');
+ * $api = new Fitted\ProductManager\Monolog\Logger('api');
  *
- * Monolog\Registry::addLogger($application);
- * Monolog\Registry::addLogger($api);
+ * Fitted\ProductManager\Monolog\Registry::addLogger($application);
+ * Fitted\ProductManager\Monolog\Registry::addLogger($api);
  *
  * function testLogger()
  * {
- *     Monolog\Registry::api()->error('Sent to $api Logger instance');
- *     Monolog\Registry::application()->error('Sent to $application Logger instance');
+ *     Fitted\ProductManager\Monolog\Registry::api()->error('Sent to $api Logger instance');
+ *     Fitted\ProductManager\Monolog\Registry::application()->error('Sent to $application Logger instance');
  * }
  * </code>
  *

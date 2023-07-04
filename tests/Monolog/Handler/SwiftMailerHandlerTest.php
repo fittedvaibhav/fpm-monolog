@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class SwiftMailerHandlerTest extends TestCase
@@ -103,7 +103,7 @@ class SwiftMailerHandlerTest extends TestCase
         $messageTemplate = new \Swift_Message();
         $handler = new SwiftMailerHandler($this->mailer, $messageTemplate);
 
-        $method = new \ReflectionMethod('Monolog\Handler\SwiftMailerHandler', 'buildMessage');
+        $method = new \ReflectionMethod('Fitted\ProductManager\Monolog\Handler\SwiftMailerHandler', 'buildMessage');
         $method->setAccessible(true);
         $method->invokeArgs($handler, [$messageTemplate, []]);
 

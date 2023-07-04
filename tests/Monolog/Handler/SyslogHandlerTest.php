@@ -9,32 +9,32 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 
 class SyslogHandlerTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @covers Monolog\Handler\SyslogHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\SyslogHandler::__construct
      */
     public function testConstruct()
     {
         $handler = new SyslogHandler('test');
-        $this->assertInstanceOf('Monolog\Handler\SyslogHandler', $handler);
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Handler\SyslogHandler', $handler);
 
         $handler = new SyslogHandler('test', LOG_USER);
-        $this->assertInstanceOf('Monolog\Handler\SyslogHandler', $handler);
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Handler\SyslogHandler', $handler);
 
         $handler = new SyslogHandler('test', 'user');
-        $this->assertInstanceOf('Monolog\Handler\SyslogHandler', $handler);
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Handler\SyslogHandler', $handler);
 
         $handler = new SyslogHandler('test', LOG_USER, Logger::DEBUG, true, LOG_PERROR);
-        $this->assertInstanceOf('Monolog\Handler\SyslogHandler', $handler);
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Handler\SyslogHandler', $handler);
     }
 
     /**
-     * @covers Monolog\Handler\SyslogHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\SyslogHandler::__construct
      */
     public function testConstructInvalidFacility()
     {

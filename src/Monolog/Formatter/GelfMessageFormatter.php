@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 use Gelf\Message;
-use Monolog\Utils;
+use Fitted\ProductManager\Monolog\Utils;
 
 /**
  * Serializes a log message to GELF
@@ -21,7 +21,7 @@ use Monolog\Utils;
  *
  * @author Matt Lehner <mlehner@gmail.com>
  *
- * @phpstan-import-type Level from \Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
  */
 class GelfMessageFormatter extends NormalizerFormatter
 {

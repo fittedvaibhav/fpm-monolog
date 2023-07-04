@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Formatter\FormatterInterface;
-use Monolog\Logger;
-use Monolog\Utils;
-use Monolog\Handler\Slack\SlackRecord;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Utils;
+use Fitted\ProductManager\Monolog\Handler\Slack\SlackRecord;
 
 /**
  * Sends notifications through Slack API
