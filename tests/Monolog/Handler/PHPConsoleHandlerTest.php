@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use Exception;
-use Monolog\ErrorHandler;
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\ErrorHandler;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 use PhpConsole\Connector;
 use PhpConsole\Dispatcher\Debug as DebugDispatcher;
 use PhpConsole\Dispatcher\Errors as ErrorDispatcher;
@@ -22,7 +22,7 @@ use PhpConsole\Handler as VendorPhpConsoleHandler;
 use PHPUnit\Framework\MockObject\MockObject;
 
 /**
- * @covers Monolog\Handler\PHPConsoleHandler
+ * @covers Fitted\ProductManager\Monolog\Handler\PHPConsoleHandler
  * @author Sergey Barbushin https://www.linkedin.com/in/barbushin
  */
 class PHPConsoleHandlerTest extends TestCase

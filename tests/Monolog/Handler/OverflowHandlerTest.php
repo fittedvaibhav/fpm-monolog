@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 /**
  * @author Kris Buist <krisbuist@gmail.com>
- * @covers \Monolog\Handler\OverflowHandler
+ * @covers \Fitted\ProductManager\Monolog\Handler\OverflowHandler
  */
 class OverflowHandlerTest extends TestCase
 {

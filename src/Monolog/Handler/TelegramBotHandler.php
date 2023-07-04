@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use RuntimeException;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 
 /**
  * Handler send logs to Telegram using Telegram Bot API.
@@ -28,7 +28,7 @@ use Monolog\Logger;
  *
  * @author Mazur Alexandr <alexandrmazur96@gmail.com>
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 class TelegramBotHandler extends AbstractProcessingHandler
 {

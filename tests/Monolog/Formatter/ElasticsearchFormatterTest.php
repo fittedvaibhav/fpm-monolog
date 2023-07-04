@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 
 class ElasticsearchFormatterTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @covers Monolog\Formatter\ElasticsearchFormatter::__construct
-     * @covers Monolog\Formatter\ElasticsearchFormatter::format
-     * @covers Monolog\Formatter\ElasticsearchFormatter::getDocument
+     * @covers Fitted\ProductManager\Monolog\Formatter\ElasticsearchFormatter::__construct
+     * @covers Fitted\ProductManager\Monolog\Formatter\ElasticsearchFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\ElasticsearchFormatter::getDocument
      */
     public function testFormat()
     {
@@ -58,8 +58,8 @@ class ElasticsearchFormatterTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\ElasticsearchFormatter::getIndex
-     * @covers Monolog\Formatter\ElasticsearchFormatter::getType
+     * @covers Fitted\ProductManager\Monolog\Formatter\ElasticsearchFormatter::getIndex
+     * @covers Fitted\ProductManager\Monolog\Formatter\ElasticsearchFormatter::getType
      */
     public function testGetters()
     {

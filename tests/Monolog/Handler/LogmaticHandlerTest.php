@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 
 /**
  * @author Julien Breux <julien.breux@gmail.com>
@@ -61,12 +61,12 @@ class LogmaticHandlerTest extends TestCase
         $useSSL = extension_loaded('openssl');
         $args = ['testToken', 'testHostname', 'testAppname', $useSSL, Logger::DEBUG, true];
         $this->res = fopen('php://memory', 'a');
-        $this->handler = $this->getMockBuilder('Monolog\Handler\LogmaticHandler')
+        $this->handler = $this->getMockBuilder('Fitted\ProductManager\Monolog\Handler\LogmaticHandler')
             ->setConstructorArgs($args)
             ->onlyMethods(['fsockopen', 'streamSetTimeout', 'closeSocket'])
             ->getMock();
 
-        $reflectionProperty = new \ReflectionProperty('Monolog\Handler\SocketHandler', 'connectionString');
+        $reflectionProperty = new \ReflectionProperty('Fitted\ProductManager\Monolog\Handler\SocketHandler', 'connectionString');
         $reflectionProperty->setAccessible(true);
         $reflectionProperty->setValue($this->handler, 'localhost:1234');
 

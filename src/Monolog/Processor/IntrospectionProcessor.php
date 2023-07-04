@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Processor;
+namespace Fitted\ProductManager\Monolog\Processor;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 use Psr\Log\LogLevel;
 
 /**
@@ -25,8 +25,8 @@ use Psr\Log\LogLevel;
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
  *
- * @phpstan-import-type Level from \Monolog\Logger
- * @phpstan-import-type LevelName from \Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type LevelName from \Fitted\ProductManager\Monolog\Logger
  */
 class IntrospectionProcessor implements ProcessorInterface
 {
@@ -51,7 +51,7 @@ class IntrospectionProcessor implements ProcessorInterface
     public function __construct($level = Logger::DEBUG, array $skipClassesPartials = [], int $skipStackFramesCount = 0)
     {
         $this->level = Logger::toMonologLevel($level);
-        $this->skipClassesPartials = array_merge(['Monolog\\'], $skipClassesPartials);
+        $this->skipClassesPartials = array_merge(['Fitted\\ProductManager\\Monolog\\'], $skipClassesPartials);
         $this->skipStackFramesCount = $skipStackFramesCount;
     }
 

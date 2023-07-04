@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 
 class StreamHandlerTest extends TestCase
 {
     /**
-     * @covers Monolog\Handler\StreamHandler::__construct
-     * @covers Monolog\Handler\StreamHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::write
      */
     public function testWrite()
     {
@@ -33,7 +33,7 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::close
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::close
      */
     public function testCloseKeepsExternalHandlersOpen()
     {
@@ -45,7 +45,7 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::close
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::close
      */
     public function testClose()
     {
@@ -59,8 +59,8 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::close
-     * @covers Monolog\Handler\Handler::__sleep
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::close
+     * @covers Fitted\ProductManager\Monolog\Handler\Handler::__sleep
      */
     public function testSerialization()
     {
@@ -86,7 +86,7 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::write
      */
     public function testWriteCreatesTheStreamResource()
     {
@@ -95,8 +95,8 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::__construct
-     * @covers Monolog\Handler\StreamHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::write
      */
     public function testWriteLocking()
     {
@@ -106,8 +106,8 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::__construct
-     * @covers Monolog\Handler\StreamHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::write
      */
     public function testWriteMissingResource()
     {
@@ -128,7 +128,7 @@ class StreamHandlerTest extends TestCase
 
     /**
      * @dataProvider invalidArgumentProvider
-     * @covers Monolog\Handler\StreamHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::__construct
      */
     public function testWriteInvalidArgument($invalidArgument)
     {
@@ -138,8 +138,8 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::__construct
-     * @covers Monolog\Handler\StreamHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::write
      */
     public function testWriteInvalidResource()
     {
@@ -150,8 +150,8 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::__construct
-     * @covers Monolog\Handler\StreamHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::write
      */
     public function testWriteNonExistingResource()
     {
@@ -162,8 +162,8 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::__construct
-     * @covers Monolog\Handler\StreamHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::write
      */
     public function testWriteNonExistingPath()
     {
@@ -172,8 +172,8 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::__construct
-     * @covers Monolog\Handler\StreamHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::write
      */
     public function testWriteNonExistingFileResource()
     {
@@ -182,8 +182,8 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\StreamHandler::__construct
-     * @covers Monolog\Handler\StreamHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\StreamHandler::write
      * @dataProvider provideNonExistingAndNotCreatablePath
      */
     public function testWriteNonExistingAndNotCreatablePath($nonExistingAndNotCreatablePath)

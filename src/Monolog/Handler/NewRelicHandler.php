@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
-use Monolog\Utils;
-use Monolog\Formatter\NormalizerFormatter;
-use Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Utils;
+use Fitted\ProductManager\Monolog\Formatter\NormalizerFormatter;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
 
 /**
  * Class to record a log on a NewRelic application.

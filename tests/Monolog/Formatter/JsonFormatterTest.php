@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class JsonFormatterTest extends TestCase
 {
     /**
-     * @covers Monolog\Formatter\JsonFormatter::__construct
-     * @covers Monolog\Formatter\JsonFormatter::getBatchMode
-     * @covers Monolog\Formatter\JsonFormatter::isAppendingNewlines
+     * @covers Fitted\ProductManager\Monolog\Formatter\JsonFormatter::__construct
+     * @covers Fitted\ProductManager\Monolog\Formatter\JsonFormatter::getBatchMode
+     * @covers Fitted\ProductManager\Monolog\Formatter\JsonFormatter::isAppendingNewlines
      */
     public function testConstruct()
     {
@@ -32,7 +32,7 @@ class JsonFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\JsonFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\JsonFormatter::format
      */
     public function testFormat()
     {
@@ -47,7 +47,7 @@ class JsonFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\JsonFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\JsonFormatter::format
      */
     public function testFormatWithPrettyPrint()
     {
@@ -79,8 +79,8 @@ class JsonFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\JsonFormatter::formatBatch
-     * @covers Monolog\Formatter\JsonFormatter::formatBatchJson
+     * @covers Fitted\ProductManager\Monolog\Formatter\JsonFormatter::formatBatch
+     * @covers Fitted\ProductManager\Monolog\Formatter\JsonFormatter::formatBatchJson
      */
     public function testFormatBatch()
     {
@@ -93,8 +93,8 @@ class JsonFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\JsonFormatter::formatBatch
-     * @covers Monolog\Formatter\JsonFormatter::formatBatchNewlines
+     * @covers Fitted\ProductManager\Monolog\Formatter\JsonFormatter::formatBatch
+     * @covers Fitted\ProductManager\Monolog\Formatter\JsonFormatter::formatBatchNewlines
      */
     public function testFormatBatchNewlines()
     {

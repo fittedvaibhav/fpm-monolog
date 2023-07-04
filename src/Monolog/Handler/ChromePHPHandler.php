@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Formatter\ChromePHPFormatter;
-use Monolog\Formatter\FormatterInterface;
-use Monolog\Logger;
-use Monolog\Utils;
+use Fitted\ProductManager\Monolog\Formatter\ChromePHPFormatter;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Utils;
 
 /**
  * Handler sending logs to the ChromePHP extension (http://www.chromephp.com/)
@@ -23,7 +23,7 @@ use Monolog\Utils;
  *
  * @author Christophe Coevoet <stof@notk.org>
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 class ChromePHPHandler extends AbstractProcessingHandler
 {
@@ -70,7 +70,7 @@ class ChromePHPHandler extends AbstractProcessingHandler
     {
         parent::__construct($level, $bubble);
         if (!function_exists('json_encode')) {
-            throw new \RuntimeException('PHP\'s json extension is required to use Monolog\'s ChromePHPHandler');
+            throw new \RuntimeException('PHP\'s json extension is required to use Fitted\ProductManager\Monolog\'s ChromePHPHandler');
         }
     }
 

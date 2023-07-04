@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 
 class WhatFailureGroupHandlerTest extends TestCase
 {
     /**
-     * @covers Monolog\Handler\WhatFailureGroupHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\WhatFailureGroupHandler::__construct
      */
     public function testConstructorOnlyTakesHandler()
     {
@@ -27,8 +27,8 @@ class WhatFailureGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\WhatFailureGroupHandler::__construct
-     * @covers Monolog\Handler\WhatFailureGroupHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\WhatFailureGroupHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\WhatFailureGroupHandler::handle
      */
     public function testHandle()
     {
@@ -44,7 +44,7 @@ class WhatFailureGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\WhatFailureGroupHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\WhatFailureGroupHandler::handleBatch
      */
     public function testHandleBatch()
     {
@@ -59,7 +59,7 @@ class WhatFailureGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\WhatFailureGroupHandler::isHandling
+     * @covers Fitted\ProductManager\Monolog\Handler\WhatFailureGroupHandler::isHandling
      */
     public function testIsHandling()
     {
@@ -71,7 +71,7 @@ class WhatFailureGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\WhatFailureGroupHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\WhatFailureGroupHandler::handle
      */
     public function testHandleUsesProcessors()
     {
@@ -89,7 +89,7 @@ class WhatFailureGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\WhatFailureGroupHandler::handleBatch
+     * @covers Fitted\ProductManager\Monolog\Handler\WhatFailureGroupHandler::handleBatch
      */
     public function testHandleBatchUsesProcessors()
     {
@@ -119,7 +119,7 @@ class WhatFailureGroupHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\WhatFailureGroupHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\WhatFailureGroupHandler::handle
      */
     public function testHandleException()
     {

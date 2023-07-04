@@ -9,20 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
-use Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy;
-use Monolog\Handler\FingersCrossed\ChannelLevelActivationStrategy;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy;
+use Fitted\ProductManager\Monolog\Handler\FingersCrossed\ChannelLevelActivationStrategy;
 use Psr\Log\LogLevel;
 
 class FingersCrossedHandlerTest extends TestCase
 {
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::__construct
-     * @covers Monolog\Handler\FingersCrossedHandler::handle
-     * @covers Monolog\Handler\FingersCrossedHandler::activate
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::activate
      */
     public function testHandleBuffers()
     {
@@ -39,8 +39,8 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::handle
-     * @covers Monolog\Handler\FingersCrossedHandler::activate
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::activate
      */
     public function testHandleStopsBufferingAfterTrigger()
     {
@@ -54,9 +54,9 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::handle
-     * @covers Monolog\Handler\FingersCrossedHandler::activate
-     * @covers Monolog\Handler\FingersCrossedHandler::reset
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::activate
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::reset
      */
     public function testHandleResetBufferingAfterReset()
     {
@@ -74,8 +74,8 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::handle
-     * @covers Monolog\Handler\FingersCrossedHandler::activate
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::activate
      */
     public function testHandleResetBufferingAfterBeingTriggeredWhenStopBufferingIsDisabled()
     {
@@ -91,8 +91,8 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::handle
-     * @covers Monolog\Handler\FingersCrossedHandler::activate
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::activate
      */
     public function testHandleBufferLimit()
     {
@@ -108,8 +108,8 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::handle
-     * @covers Monolog\Handler\FingersCrossedHandler::activate
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::activate
      */
     public function testHandleWithCallback()
     {
@@ -127,8 +127,8 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::handle
-     * @covers Monolog\Handler\FingersCrossedHandler::activate
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::activate
      */
     public function testHandleWithBadCallbackThrowsException()
     {
@@ -142,7 +142,7 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::isHandling
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::isHandling
      */
     public function testIsHandlingAlways()
     {
@@ -152,9 +152,9 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::__construct
-     * @covers Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy::__construct
-     * @covers Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy::isHandlerActivated
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy::isHandlerActivated
      */
     public function testErrorLevelActivationStrategy()
     {
@@ -168,9 +168,9 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::__construct
-     * @covers Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy::__construct
-     * @covers Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy::isHandlerActivated
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy::isHandlerActivated
      */
     public function testErrorLevelActivationStrategyWithPsrLevel()
     {
@@ -184,8 +184,8 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::__construct
-     * @covers Monolog\Handler\FingersCrossedHandler::activate
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::activate
      */
     public function testOverrideActivationStrategy()
     {
@@ -200,8 +200,8 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossed\ChannelLevelActivationStrategy::__construct
-     * @covers Monolog\Handler\FingersCrossed\ChannelLevelActivationStrategy::isHandlerActivated
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossed\ChannelLevelActivationStrategy::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossed\ChannelLevelActivationStrategy::isHandlerActivated
      */
     public function testChannelLevelActivationStrategy()
     {
@@ -217,8 +217,8 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossed\ChannelLevelActivationStrategy::__construct
-     * @covers Monolog\Handler\FingersCrossed\ChannelLevelActivationStrategy::isHandlerActivated
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossed\ChannelLevelActivationStrategy::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossed\ChannelLevelActivationStrategy::isHandlerActivated
      */
     public function testChannelLevelActivationStrategyWithPsrLevels()
     {
@@ -234,8 +234,8 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::handle
-     * @covers Monolog\Handler\FingersCrossedHandler::activate
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::activate
      */
     public function testHandleUsesProcessors()
     {
@@ -253,7 +253,7 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::close
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::close
      */
     public function testPassthruOnClose()
     {
@@ -267,7 +267,7 @@ class FingersCrossedHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\FingersCrossedHandler::close
+     * @covers Fitted\ProductManager\Monolog\Handler\FingersCrossedHandler::close
      */
     public function testPsrLevelPassthruOnClose()
     {

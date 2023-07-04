@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Processor;
+namespace Fitted\ProductManager\Monolog\Processor;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 use Psr\Log\LogLevel;
 
 /**
@@ -19,8 +19,8 @@ use Psr\Log\LogLevel;
  *
  * @author Jonathan A. Schweder <jonathanschweder@gmail.com>
  *
- * @phpstan-import-type LevelName from \Monolog\Logger
- * @phpstan-import-type Level from \Monolog\Logger
+ * @phpstan-import-type LevelName from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
  */
 class MercurialProcessor implements ProcessorInterface
 {

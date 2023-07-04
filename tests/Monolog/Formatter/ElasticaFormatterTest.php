@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 
 class ElasticaFormatterTest extends \PHPUnit\Framework\TestCase
 {
@@ -23,9 +23,9 @@ class ElasticaFormatterTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\ElasticaFormatter::__construct
-     * @covers Monolog\Formatter\ElasticaFormatter::format
-     * @covers Monolog\Formatter\ElasticaFormatter::getDocument
+     * @covers Fitted\ProductManager\Monolog\Formatter\ElasticaFormatter::__construct
+     * @covers Fitted\ProductManager\Monolog\Formatter\ElasticaFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\ElasticaFormatter::getDocument
      */
     public function testFormat()
     {
@@ -68,8 +68,8 @@ class ElasticaFormatterTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\ElasticaFormatter::getIndex
-     * @covers Monolog\Formatter\ElasticaFormatter::getType
+     * @covers Fitted\ProductManager\Monolog\Formatter\ElasticaFormatter::getIndex
+     * @covers Fitted\ProductManager\Monolog\Formatter\ElasticaFormatter::getType
      */
     public function testGetters()
     {

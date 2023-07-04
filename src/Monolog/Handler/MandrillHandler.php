@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 use Swift;
 use Swift_Message;
 

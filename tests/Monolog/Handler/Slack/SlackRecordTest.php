@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler\Slack;
+namespace Fitted\ProductManager\Monolog\Handler\Slack;
 
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 /**
- * @coversDefaultClass Monolog\Handler\Slack\SlackRecord
+ * @coversDefaultClass Fitted\ProductManager\Monolog\Handler\Slack\SlackRecord
  */
 class SlackRecordTest extends TestCase
 {
@@ -163,7 +163,7 @@ class SlackRecordTest extends TestCase
 
     public function testTextEqualsFormatterOutput()
     {
-        $formatter = $this->createMock('Monolog\\Formatter\\FormatterInterface');
+        $formatter = $this->createMock('Fitted\\ProductManager\\Monolog\\Formatter\\FormatterInterface');
         $formatter
             ->expects($this->any())
             ->method('format')
@@ -171,7 +171,7 @@ class SlackRecordTest extends TestCase
                 return $record['message'] . 'test';
             }));
 
-        $formatter2 = $this->createMock('Monolog\\Formatter\\FormatterInterface');
+        $formatter2 = $this->createMock('Fitted\\ProductManager\\Monolog\\Formatter\\FormatterInterface');
         $formatter2
             ->expects($this->any())
             ->method('format')

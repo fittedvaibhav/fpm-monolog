@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
-use Monolog\Formatter\LineFormatter;
-use Monolog\Handler\Slack\SlackRecord;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\LineFormatter;
+use Fitted\ProductManager\Monolog\Handler\Slack\SlackRecord;
 
 /**
  * @author Haralan Dobrev <hkdobrev@gmail.com>
  * @see    https://api.slack.com/incoming-webhooks
- * @coversDefaultClass Monolog\Handler\SlackWebhookHandler
+ * @coversDefaultClass Fitted\ProductManager\Monolog\Handler\SlackWebhookHandler
  */
 class SlackWebhookHandlerTest extends TestCase
 {
@@ -34,7 +34,7 @@ class SlackWebhookHandlerTest extends TestCase
         $handler = new SlackWebhookHandler(self::WEBHOOK_URL);
         $record = $this->getRecord();
         $slackRecord = $handler->getSlackRecord();
-        $this->assertInstanceOf('Monolog\Handler\Slack\SlackRecord', $slackRecord);
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Handler\Slack\SlackRecord', $slackRecord);
         $this->assertEquals(array(
             'attachments' => array(
                 array(
@@ -75,7 +75,7 @@ class SlackWebhookHandlerTest extends TestCase
         );
 
         $slackRecord = $handler->getSlackRecord();
-        $this->assertInstanceOf('Monolog\Handler\Slack\SlackRecord', $slackRecord);
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Handler\Slack\SlackRecord', $slackRecord);
         $this->assertEquals(array(
             'username' => 'test-username',
             'text' => 'test',
@@ -91,7 +91,7 @@ class SlackWebhookHandlerTest extends TestCase
     {
         $handler = new SlackWebhookHandler(self::WEBHOOK_URL);
         $formatter = $handler->getFormatter();
-        $this->assertInstanceOf('Monolog\Formatter\FormatterInterface', $formatter);
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Formatter\FormatterInterface', $formatter);
     }
 
     /**

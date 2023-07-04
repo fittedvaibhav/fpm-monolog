@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class FluentdFormatterTest extends TestCase
 {
     /**
-     * @covers Monolog\Formatter\FluentdFormatter::__construct
-     * @covers Monolog\Formatter\FluentdFormatter::isUsingLevelsInTag
+     * @covers Fitted\ProductManager\Monolog\Formatter\FluentdFormatter::__construct
+     * @covers Fitted\ProductManager\Monolog\Formatter\FluentdFormatter::isUsingLevelsInTag
      */
     public function testConstruct()
     {
@@ -31,7 +31,7 @@ class FluentdFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\FluentdFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\FluentdFormatter::format
      */
     public function testFormat()
     {
@@ -46,7 +46,7 @@ class FluentdFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\FluentdFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\FluentdFormatter::format
      */
     public function testFormatWithTag()
     {

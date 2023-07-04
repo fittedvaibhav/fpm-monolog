@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog;
+namespace Fitted\ProductManager\Monolog;
 
 class UtilsTest extends \PHPUnit_Framework_TestCase
 {
@@ -60,7 +60,7 @@ class UtilsTest extends \PHPUnit_Framework_TestCase
     /**
      * @param mixed $in     Input
      * @param mixed $expect Expected output
-     * @covers Monolog\Formatter\NormalizerFormatter::detectAndCleanUtf8
+     * @covers Fitted\ProductManager\Monolog\Formatter\NormalizerFormatter::detectAndCleanUtf8
      * @dataProvider providesDetectAndCleanUtf8
      */
     public function testDetectAndCleanUtf8($in, $expect)

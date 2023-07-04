@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use MongoDB\Driver\Manager;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class MongoDBHandlerTest extends TestCase
 {

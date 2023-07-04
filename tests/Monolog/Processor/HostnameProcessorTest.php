@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Processor;
+namespace Fitted\ProductManager\Monolog\Processor;
 
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class HostnameProcessorTest extends TestCase
 {
     /**
-     * @covers Monolog\Processor\HostnameProcessor::__invoke
+     * @covers Fitted\ProductManager\Monolog\Processor\HostnameProcessor::__invoke
      */
     public function testProcessor()
     {

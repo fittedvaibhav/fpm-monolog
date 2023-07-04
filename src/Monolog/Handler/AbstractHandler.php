@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Logger;
-use Monolog\ResettableInterface;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\ResettableInterface;
 use Psr\Log\LogLevel;
 
 /**
@@ -20,8 +20,8 @@ use Psr\Log\LogLevel;
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
  *
- * @phpstan-import-type Level from \Monolog\Logger
- * @phpstan-import-type LevelName from \Monolog\Logger
+ * @phpstan-import-type Level from \Fitted\ProductManager\Monolog\Logger
+ * @phpstan-import-type LevelName from \Fitted\ProductManager\Monolog\Logger
  */
 abstract class AbstractHandler extends Handler implements ResettableInterface
 {

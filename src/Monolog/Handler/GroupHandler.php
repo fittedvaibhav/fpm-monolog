@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Formatter\FormatterInterface;
-use Monolog\ResettableInterface;
+use Fitted\ProductManager\Monolog\Formatter\FormatterInterface;
+use Fitted\ProductManager\Monolog\ResettableInterface;
 
 /**
  * Forwards records to multiple handlers
  *
  * @author Lenar Lõhmus <lenar@city.ee>
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 class GroupHandler extends Handler implements ProcessableHandlerInterface, ResettableInterface
 {

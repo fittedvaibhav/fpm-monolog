@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
-use Monolog\Formatter\LineFormatter;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Formatter\LineFormatter;
 
 /**
- * @covers Monolog\Handler\PsrHandler::handle
+ * @covers Fitted\ProductManager\Monolog\Handler\PsrHandler::handle
  */
 class PsrHandlerTest extends TestCase
 {

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Logger;
 use PHPUnit\Framework\TestCase;
 
 class GelfMessageFormatterTest extends TestCase
@@ -24,7 +24,7 @@ class GelfMessageFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\GelfMessageFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\GelfMessageFormatter::format
      */
     public function testDefaultFormatter()
     {
@@ -59,7 +59,7 @@ class GelfMessageFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\GelfMessageFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\GelfMessageFormatter::format
      */
     public function testFormatWithFileAndLine()
     {
@@ -82,7 +82,7 @@ class GelfMessageFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\GelfMessageFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\GelfMessageFormatter::format
      */
     public function testFormatInvalidFails()
     {
@@ -98,7 +98,7 @@ class GelfMessageFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\GelfMessageFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\GelfMessageFormatter::format
      */
     public function testFormatWithContext()
     {
@@ -135,7 +135,7 @@ class GelfMessageFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\GelfMessageFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\GelfMessageFormatter::format
      */
     public function testFormatWithContextContainingException()
     {
@@ -163,7 +163,7 @@ class GelfMessageFormatterTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Formatter\GelfMessageFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\GelfMessageFormatter::format
      */
     public function testFormatWithExtra()
     {

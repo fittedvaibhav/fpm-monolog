@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use Throwable;
 
@@ -20,7 +20,7 @@ use Throwable;
  *
  * As soon as one handler handles a record successfully, the handling stops there.
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 class FallbackGroupHandler extends GroupHandler
 {

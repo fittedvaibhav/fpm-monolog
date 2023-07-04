@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers Monolog\Formatter\NormalizerFormatter
+ * @covers Fitted\ProductManager\Monolog\Formatter\NormalizerFormatter
  */
 class NormalizerFormatterTest extends TestCase
 {
@@ -42,8 +42,8 @@ class NormalizerFormatterTest extends TestCase
             'message' => 'foo',
             'datetime' => date('Y-m-d'),
             'extra' => [
-                'foo' => ['Monolog\\Formatter\\TestFooNorm' => ["foo" => "fooValue"]],
-                'bar' => ['Monolog\\Formatter\\TestBarNorm' => 'bar'],
+                'foo' => ['Fitted\\ProductManager\\Monolog\\Formatter\\TestFooNorm' => ["foo" => "fooValue"]],
+                'bar' => ['Fitted\\ProductManager\\Monolog\\Formatter\\TestBarNorm' => 'bar'],
                 'baz' => [],
                 'res' => '[resource(stream)]',
             ],

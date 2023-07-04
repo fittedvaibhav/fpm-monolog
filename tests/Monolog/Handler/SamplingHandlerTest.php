@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 /**
- * @covers Monolog\Handler\SamplingHandler::handle
+ * @covers Fitted\ProductManager\Monolog\Handler\SamplingHandler::handle
  */
 class SamplingHandlerTest extends TestCase
 {

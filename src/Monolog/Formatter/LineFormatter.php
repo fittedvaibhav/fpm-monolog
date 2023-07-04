@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Utils;
+use Fitted\ProductManager\Monolog\Utils;
 
 /**
  * Formats incoming records into a one-line string

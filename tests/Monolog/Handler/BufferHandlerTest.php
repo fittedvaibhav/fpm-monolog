@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 
 class BufferHandlerTest extends TestCase
 {
     private $shutdownCheckHandler;
 
     /**
-     * @covers Monolog\Handler\BufferHandler::__construct
-     * @covers Monolog\Handler\BufferHandler::handle
-     * @covers Monolog\Handler\BufferHandler::close
+     * @covers Fitted\ProductManager\Monolog\Handler\BufferHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\BufferHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\BufferHandler::close
      */
     public function testHandleBuffers()
     {
@@ -37,8 +37,8 @@ class BufferHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\BufferHandler::close
-     * @covers Monolog\Handler\BufferHandler::flush
+     * @covers Fitted\ProductManager\Monolog\Handler\BufferHandler::close
+     * @covers Fitted\ProductManager\Monolog\Handler\BufferHandler::flush
      */
     public function testPropagatesRecordsAtEndOfRequest()
     {
@@ -59,7 +59,7 @@ class BufferHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\BufferHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\BufferHandler::handle
      */
     public function testHandleBufferLimit()
     {
@@ -76,7 +76,7 @@ class BufferHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\BufferHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\BufferHandler::handle
      */
     public function testHandleBufferLimitWithFlushOnOverflow()
     {
@@ -106,7 +106,7 @@ class BufferHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\BufferHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\BufferHandler::handle
      */
     public function testHandleLevel()
     {
@@ -123,7 +123,7 @@ class BufferHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\BufferHandler::flush
+     * @covers Fitted\ProductManager\Monolog\Handler\BufferHandler::flush
      */
     public function testFlush()
     {
@@ -138,7 +138,7 @@ class BufferHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\BufferHandler::handle
+     * @covers Fitted\ProductManager\Monolog\Handler\BufferHandler::handle
      */
     public function testHandleUsesProcessors()
     {

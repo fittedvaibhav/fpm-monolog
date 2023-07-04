@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 
 /**
- * @covers Monolog\Handler\BrowserConsoleHandlerTest
+ * @covers Fitted\ProductManager\Monolog\Handler\BrowserConsoleHandlerTest
  */
 class BrowserConsoleHandlerTest extends TestCase
 {
@@ -26,7 +26,7 @@ class BrowserConsoleHandlerTest extends TestCase
 
     protected function generateScript()
     {
-        $reflMethod = new \ReflectionMethod('Monolog\Handler\BrowserConsoleHandler', 'generateScript');
+        $reflMethod = new \ReflectionMethod('Fitted\ProductManager\Monolog\Handler\BrowserConsoleHandler', 'generateScript');
         $reflMethod->setAccessible(true);
 
         return $reflMethod->invoke(null);

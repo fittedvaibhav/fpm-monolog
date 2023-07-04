@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog;
+namespace Fitted\ProductManager\Monolog;
 
-use Monolog\Handler\TestHandler;
+use Fitted\ProductManager\Monolog\Handler\TestHandler;
 use Psr\Log\LogLevel;
 
 class ErrorHandlerTest extends \PHPUnit\Framework\TestCase
@@ -92,7 +92,7 @@ class ErrorHandlerTest extends \PHPUnit\Framework\TestCase
         $logger = new Logger('test', [$handler = new TestHandler]);
         $errHandler = new ErrorHandler($logger);
 
-        $resHandler = $errHandler->registerExceptionHandler($map = ['Monolog\CustomTestException' => LogLevel::DEBUG, 'TypeError' => LogLevel::NOTICE, 'Throwable' => LogLevel::WARNING], false);
+        $resHandler = $errHandler->registerExceptionHandler($map = ['Fitted\ProductManager\Monolog\CustomTestException' => LogLevel::DEBUG, 'TypeError' => LogLevel::NOTICE, 'Throwable' => LogLevel::WARNING], false);
         $this->assertSame($errHandler, $resHandler);
 
         $map['ParseError'] = LogLevel::CRITICAL;

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 /**
  * @requires extension sockets
@@ -30,11 +30,11 @@ class SyslogUdpHandlerTest extends TestCase
         $pid = getmypid();
         $host = gethostname();
 
-        $handler = new \Monolog\Handler\SyslogUdpHandler("127.0.0.1", 514, "authpriv");
-        $handler->setFormatter(new \Monolog\Formatter\ChromePHPFormatter());
+        $handler = new \Fitted\ProductManager\Monolog\Handler\SyslogUdpHandler("127.0.0.1", 514, "authpriv");
+        $handler->setFormatter(new \Fitted\ProductManager\Monolog\Formatter\ChromePHPFormatter());
 
         $time = '2014-01-07T12:34:56+00:00';
-        $socket = $this->getMockBuilder('Monolog\Handler\SyslogUdp\UdpSocket')
+        $socket = $this->getMockBuilder('Fitted\ProductManager\Monolog\Handler\SyslogUdp\UdpSocket')
             ->onlyMethods(['write'])
             ->setConstructorArgs(['lol'])
             ->getMock();
@@ -55,7 +55,7 @@ class SyslogUdpHandlerTest extends TestCase
         $handler = new SyslogUdpHandler("127.0.0.1", 514, "authpriv");
         $handler->setFormatter($this->getIdentityFormatter());
 
-        $socket = $this->getMockBuilder('Monolog\Handler\SyslogUdp\UdpSocket')
+        $socket = $this->getMockBuilder('Fitted\ProductManager\Monolog\Handler\SyslogUdp\UdpSocket')
             ->onlyMethods(['write'])
             ->setConstructorArgs(['lol'])
             ->getMock();
@@ -73,14 +73,14 @@ class SyslogUdpHandlerTest extends TestCase
         $pid = getmypid();
         $host = gethostname();
 
-        $handler = $this->getMockBuilder('\Monolog\Handler\SyslogUdpHandler')
-            ->setConstructorArgs(array("127.0.0.1", 514, "authpriv", 'debug', true, "php", \Monolog\Handler\SyslogUdpHandler::RFC3164))
+        $handler = $this->getMockBuilder('\Fitted\ProductManager\Monolog\Handler\SyslogUdpHandler')
+            ->setConstructorArgs(array("127.0.0.1", 514, "authpriv", 'debug', true, "php", \Fitted\ProductManager\Monolog\Handler\SyslogUdpHandler::RFC3164))
             ->onlyMethods([])
             ->getMock();
 
-        $handler->setFormatter(new \Monolog\Formatter\ChromePHPFormatter());
+        $handler->setFormatter(new \Fitted\ProductManager\Monolog\Formatter\ChromePHPFormatter());
 
-        $socket = $this->getMockBuilder('\Monolog\Handler\SyslogUdp\UdpSocket')
+        $socket = $this->getMockBuilder('\Fitted\ProductManager\Monolog\Handler\SyslogUdp\UdpSocket')
             ->setConstructorArgs(array('lol', 999))
             ->onlyMethods(array('write'))
             ->getMock();
@@ -98,6 +98,6 @@ class SyslogUdpHandlerTest extends TestCase
 
     protected function getRecordWithMessage($msg)
     {
-        return ['message' => $msg, 'level' => \Monolog\Logger::WARNING, 'context' => null, 'extra' => [], 'channel' => 'lol', 'datetime' => new \DateTimeImmutable('2014-01-07 12:34:56')];
+        return ['message' => $msg, 'level' => \Fitted\ProductManager\Monolog\Logger::WARNING, 'context' => null, 'extra' => [], 'channel' => 'lol', 'datetime' => new \DateTimeImmutable('2014-01-07 12:34:56')];
     }
 }

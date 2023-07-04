@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 
 class DeduplicationHandlerTest extends TestCase
 {
     /**
-     * @covers Monolog\Handler\DeduplicationHandler::flush
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::flush
      */
     public function testFlushPassthruIfAllRecordsUnderTrigger()
     {
@@ -36,8 +36,8 @@ class DeduplicationHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\DeduplicationHandler::flush
-     * @covers Monolog\Handler\DeduplicationHandler::appendRecord
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::flush
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::appendRecord
      */
     public function testFlushPassthruIfEmptyLog()
     {
@@ -56,9 +56,9 @@ class DeduplicationHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\DeduplicationHandler::flush
-     * @covers Monolog\Handler\DeduplicationHandler::appendRecord
-     * @covers Monolog\Handler\DeduplicationHandler::isDuplicate
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::flush
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::appendRecord
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::isDuplicate
      * @depends testFlushPassthruIfEmptyLog
      */
     public function testFlushSkipsIfLogExists()
@@ -77,9 +77,9 @@ class DeduplicationHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\DeduplicationHandler::flush
-     * @covers Monolog\Handler\DeduplicationHandler::appendRecord
-     * @covers Monolog\Handler\DeduplicationHandler::isDuplicate
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::flush
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::appendRecord
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::isDuplicate
      * @depends testFlushPassthruIfEmptyLog
      */
     public function testFlushPassthruIfLogTooOld()
@@ -102,10 +102,10 @@ class DeduplicationHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\DeduplicationHandler::flush
-     * @covers Monolog\Handler\DeduplicationHandler::appendRecord
-     * @covers Monolog\Handler\DeduplicationHandler::isDuplicate
-     * @covers Monolog\Handler\DeduplicationHandler::collectLogs
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::flush
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::appendRecord
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::isDuplicate
+     * @covers Fitted\ProductManager\Monolog\Handler\DeduplicationHandler::collectLogs
      */
     public function testGcOldLogs()
     {

@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\ResettableInterface;
-use Monolog\Processor\ProcessorInterface;
+use Fitted\ProductManager\Monolog\ResettableInterface;
+use Fitted\ProductManager\Monolog\Processor\ProcessorInterface;
 
 /**
  * Helper trait for implementing ProcessableInterface
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
  *
- * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Record from \Fitted\ProductManager\Monolog\Logger
  */
 trait ProcessableHandlerTrait
 {

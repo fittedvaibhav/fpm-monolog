@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use InvalidArgumentException;
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 /**
- * @covers Monolog\Handler\RotatingFileHandler
+ * @covers Fitted\ProductManager\Monolog\Handler\RotatingFileHandler
  */
 class RotatingFileHandlerTest extends TestCase
 {

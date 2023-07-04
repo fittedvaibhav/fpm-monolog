@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog;
+namespace Fitted\ProductManager\Monolog;
 
-use Monolog\Handler\TestHandler;
-use Monolog\Formatter\LineFormatter;
-use Monolog\Processor\PsrLogMessageProcessor;
+use Fitted\ProductManager\Monolog\Handler\TestHandler;
+use Fitted\ProductManager\Monolog\Formatter\LineFormatter;
+use Fitted\ProductManager\Monolog\Processor\PsrLogMessageProcessor;
 use Psr\Log\Test\LoggerInterfaceTest;
 
 class PsrLogCompatTest extends LoggerInterfaceTest

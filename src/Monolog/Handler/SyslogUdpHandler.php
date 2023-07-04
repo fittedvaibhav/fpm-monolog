@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
 use DateTimeInterface;
-use Monolog\Logger;
-use Monolog\Handler\SyslogUdp\UdpSocket;
+use Fitted\ProductManager\Monolog\Logger;
+use Fitted\ProductManager\Monolog\Handler\SyslogUdp\UdpSocket;
 
 /**
  * A Handler for logging to a remote syslogd server.

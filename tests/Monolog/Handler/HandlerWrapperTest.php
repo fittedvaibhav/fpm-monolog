@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 /**
  * @author Alexey Karapetov <alexey@karapetov.com>
@@ -28,7 +28,7 @@ class HandlerWrapperTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $this->handler = $this->createMock('Monolog\\Handler\\HandlerInterface');
+        $this->handler = $this->createMock('Fitted\\ProductManager\\Monolog\\Handler\\HandlerInterface');
         $this->wrapper = new HandlerWrapper($this->handler);
     }
 

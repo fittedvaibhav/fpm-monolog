@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class DynamoDbHandlerTest extends TestCase
 {
@@ -47,24 +47,24 @@ class DynamoDbHandlerTest extends TestCase
 
     public function testConstruct()
     {
-        $this->assertInstanceOf('Monolog\Handler\DynamoDbHandler', new DynamoDbHandler($this->client, 'foo'));
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Handler\DynamoDbHandler', new DynamoDbHandler($this->client, 'foo'));
     }
 
     public function testInterface()
     {
-        $this->assertInstanceOf('Monolog\Handler\HandlerInterface', new DynamoDbHandler($this->client, 'foo'));
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Handler\HandlerInterface', new DynamoDbHandler($this->client, 'foo'));
     }
 
     public function testGetFormatter()
     {
         $handler = new DynamoDbHandler($this->client, 'foo');
-        $this->assertInstanceOf('Monolog\Formatter\ScalarFormatter', $handler->getFormatter());
+        $this->assertInstanceOf('Fitted\ProductManager\Monolog\Formatter\ScalarFormatter', $handler->getFormatter());
     }
 
     public function testHandle()
     {
         $record = $this->getRecord();
-        $formatter = $this->createMock('Monolog\Formatter\FormatterInterface');
+        $formatter = $this->createMock('Fitted\ProductManager\Monolog\Formatter\FormatterInterface');
         $formatted = ['foo' => 1, 'bar' => 2];
         $handler = new DynamoDbHandler($this->client, 'foo');
         $handler->setFormatter($formatter);

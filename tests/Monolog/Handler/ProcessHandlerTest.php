@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Handler;
+namespace Fitted\ProductManager\Monolog\Handler;
 
-use Monolog\Test\TestCase;
-use Monolog\Logger;
+use Fitted\ProductManager\Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Logger;
 
 class ProcessHandlerTest extends TestCase
 {
@@ -24,13 +24,13 @@ class ProcessHandlerTest extends TestCase
     const DUMMY_COMMAND = 'echo';
 
     /**
-     * @covers Monolog\Handler\ProcessHandler::__construct
-     * @covers Monolog\Handler\ProcessHandler::guardAgainstInvalidCommand
-     * @covers Monolog\Handler\ProcessHandler::guardAgainstInvalidCwd
-     * @covers Monolog\Handler\ProcessHandler::write
-     * @covers Monolog\Handler\ProcessHandler::ensureProcessIsStarted
-     * @covers Monolog\Handler\ProcessHandler::startProcess
-     * @covers Monolog\Handler\ProcessHandler::handleStartupErrors
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::guardAgainstInvalidCommand
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::guardAgainstInvalidCwd
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::ensureProcessIsStarted
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::startProcess
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::handleStartupErrors
      */
     public function testWriteOpensProcessAndWritesToStdInOfProcess()
     {
@@ -39,7 +39,7 @@ class ProcessHandlerTest extends TestCase
             'foobar1337',
         ];
 
-        $mockBuilder = $this->getMockBuilder('Monolog\Handler\ProcessHandler');
+        $mockBuilder = $this->getMockBuilder('Fitted\ProductManager\Monolog\Handler\ProcessHandler');
         $mockBuilder->onlyMethods(['writeProcessInput']);
         // using echo as command, as it is most probably available
         $mockBuilder->setConstructorArgs([self::DUMMY_COMMAND]);
@@ -73,7 +73,7 @@ class ProcessHandlerTest extends TestCase
     /**
      * @dataProvider invalidCommandProvider
      * @param mixed $invalidCommand
-     * @covers Monolog\Handler\ProcessHandler::guardAgainstInvalidCommand
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::guardAgainstInvalidCommand
      */
     public function testConstructWithInvalidCommandThrowsInvalidArgumentException($invalidCommand, $expectedExcep)
     {
@@ -98,7 +98,7 @@ class ProcessHandlerTest extends TestCase
     /**
      * @dataProvider invalidCwdProvider
      * @param mixed $invalidCwd
-     * @covers Monolog\Handler\ProcessHandler::guardAgainstInvalidCwd
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::guardAgainstInvalidCwd
      */
     public function testConstructWithInvalidCwdThrowsInvalidArgumentException($invalidCwd, $expectedExcep)
     {
@@ -107,25 +107,25 @@ class ProcessHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ProcessHandler::__construct
-     * @covers Monolog\Handler\ProcessHandler::guardAgainstInvalidCwd
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::__construct
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::guardAgainstInvalidCwd
      */
     public function testConstructWithValidCwdWorks()
     {
         $handler = new ProcessHandler(self::DUMMY_COMMAND, Logger::DEBUG, true, sys_get_temp_dir());
         $this->assertInstanceOf(
-            'Monolog\Handler\ProcessHandler',
+            'Fitted\ProductManager\Monolog\Handler\ProcessHandler',
             $handler,
             'Constructed handler is not a ProcessHandler.'
         );
     }
 
     /**
-     * @covers Monolog\Handler\ProcessHandler::handleStartupErrors
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::handleStartupErrors
      */
     public function testStartupWithFailingToSelectErrorStreamThrowsUnexpectedValueException()
     {
-        $mockBuilder = $this->getMockBuilder('Monolog\Handler\ProcessHandler');
+        $mockBuilder = $this->getMockBuilder('Fitted\ProductManager\Monolog\Handler\ProcessHandler');
         $mockBuilder->onlyMethods(['selectErrorStream']);
         $mockBuilder->setConstructorArgs([self::DUMMY_COMMAND]);
 
@@ -141,8 +141,8 @@ class ProcessHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ProcessHandler::handleStartupErrors
-     * @covers Monolog\Handler\ProcessHandler::selectErrorStream
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::handleStartupErrors
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::selectErrorStream
      */
     public function testStartupWithErrorsThrowsUnexpectedValueException()
     {
@@ -154,11 +154,11 @@ class ProcessHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ProcessHandler::write
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::write
      */
     public function testWritingWithErrorsOnStdOutOfProcessThrowsInvalidArgumentException()
     {
-        $mockBuilder = $this->getMockBuilder('Monolog\Handler\ProcessHandler');
+        $mockBuilder = $this->getMockBuilder('Fitted\ProductManager\Monolog\Handler\ProcessHandler');
         $mockBuilder->onlyMethods(['readProcessErrors']);
         // using echo as command, as it is most probably available
         $mockBuilder->setConstructorArgs([self::DUMMY_COMMAND]);
@@ -175,11 +175,11 @@ class ProcessHandlerTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Handler\ProcessHandler::close
+     * @covers Fitted\ProductManager\Monolog\Handler\ProcessHandler::close
      */
     public function testCloseClosesProcess()
     {
-        $class = new \ReflectionClass('Monolog\Handler\ProcessHandler');
+        $class = new \ReflectionClass('Fitted\ProductManager\Monolog\Handler\ProcessHandler');
         $property = $class->getProperty('process');
         $property->setAccessible(true);
 

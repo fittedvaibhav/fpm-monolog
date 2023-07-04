@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Formatter;
+namespace Fitted\ProductManager\Monolog\Formatter;
 
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 /**
  * @author Julien Breux <julien.breux@gmail.com>
@@ -19,7 +19,7 @@ use Monolog\Test\TestCase;
 class LogmaticFormatterTest extends TestCase
 {
     /**
-     * @covers Monolog\Formatter\LogmaticFormatter::format
+     * @covers Fitted\ProductManager\Monolog\Formatter\LogmaticFormatter::format
      */
     public function testFormat()
     {

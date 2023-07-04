@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Monolog\Processor;
+namespace Fitted\ProductManager\Monolog\Processor;
 
-use Monolog\Test\TestCase;
+use Fitted\ProductManager\Monolog\Test\TestCase;
 
 class MemoryPeakUsageProcessorTest extends TestCase
 {
     /**
-     * @covers Monolog\Processor\MemoryPeakUsageProcessor::__invoke
-     * @covers Monolog\Processor\MemoryProcessor::formatBytes
+     * @covers Fitted\ProductManager\Monolog\Processor\MemoryPeakUsageProcessor::__invoke
+     * @covers Fitted\ProductManager\Monolog\Processor\MemoryProcessor::formatBytes
      */
     public function testProcessor()
     {
@@ -28,8 +28,8 @@ class MemoryPeakUsageProcessorTest extends TestCase
     }
 
     /**
-     * @covers Monolog\Processor\MemoryPeakUsageProcessor::__invoke
-     * @covers Monolog\Processor\MemoryProcessor::formatBytes
+     * @covers Fitted\ProductManager\Monolog\Processor\MemoryPeakUsageProcessor::__invoke
+     * @covers Fitted\ProductManager\Monolog\Processor\MemoryProcessor::formatBytes
      */
     public function testProcessorWithoutFormatting()
     {
