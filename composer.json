@@ -1,5 +1,5 @@
 {
-    "name": "monolog/monolog",
+    "name": "fittedvaibhav/fpm-monolog",
     "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
     "keywords": ["log", "logging", "psr-3"],
     "homepage": "https://github.com/Seldaek/monolog",
@@ -10,6 +10,10 @@
             "name": "Jordi Boggiano",
             "email": "j.boggiano@seld.be",
             "homepage": "https://seld.be"
+        },
+        {
+            "name": "Vaibhav Jindal",
+            "email": "vaibhav.jindal@fittedretail.com"
         }
     ],
     "require": {
